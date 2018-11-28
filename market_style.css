@@ -1,0 +1,228 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 22, 2017, 9:56:53 PM
+    Author     : manunited
+*/
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#div16
+{
+    background-color:#3b5998;
+    height: 100px;
+    position:absolute;
+}
+
+#div1
+{
+    background-color:#3b5998;
+    height: 100px;
+    width: 1600px; 
+    position:absolute;
+}
+
+#div2
+{
+   
+    height: 30px;
+    
+    margin-left: 250px;
+    padding-top:30px;
+    font-family:sans-serif;
+    font-size : 50px;
+    color: white; 
+    position:absolute;
+}
+
+#div3
+{
+     height: 30px;
+    width: 200px; 
+     margin-left: 830px;
+   padding-top: 30px;
+    color: white;
+   position:absolute;
+}
+
+#div4
+{
+     height: 30px;
+    width: 200px; 
+     margin-left: 1020px;
+     padding-top: 30px;
+    color: white;
+   position:absolute;
+}
+
+
+#div6
+{
+    background-image: url('1.jpg');
+    height: 670px; 
+    margin-top: 100px;
+    position:absolute;
+}
+
+#div7
+{
+    height: 570px;
+    width: 500px; 
+    margin-top: 0px;
+    margin-left: 800px;
+
+    position:absolute;
+}
+
+#div8
+{
+    font-size:36px;
+    font-family: inherit;   
+    font-weight: bold;
+    position:absolute;
+    height: 40px;
+    width: 300px; 
+    margin-top: 10px;
+}
+
+#div9
+{ 
+    font-size:20px;
+    font-weight: bold;
+    position:absolute;
+    height: 40px;
+    width: 300px; 
+    margin-top: 60px;
+}
+
+#div10
+{ 
+    position:absolute;
+    height: 20px;
+    width: 175px; 
+    margin-top: 70px;
+   
+}
+
+#div12
+{
+   
+    
+    margin-left: 800px;
+    padding-top:40px;
+    font-family:sans-serif;
+    font-size : 30px; 
+    position:absolute;
+    
+}
+
+
+
+::-webkit-input-placeholder {
+    font-size: 15px;
+  color: #bdc7d8;
+}
+
+#div13
+{
+     position:absolute;
+     margin-left: 1210px; 
+     margin-top: 38px;
+}
+
+#input1
+{
+     color: white ;
+     background-color:#337ab7 ; 
+   border-color:#337ab7;
+   border-width:thin;
+   font-family:sans-serif;
+   font-size : 20px;
+   height: 40px; 
+   width: 90px;
+   border-radius: 20px; 
+   outline: 0;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+#div14
+{
+    position:absolute;
+    padding-top:40px;
+    font-family:sans-serif;
+    font-size : 30px; 
+}
+
+#a
+{
+    color: wheat; 
+    text-decoration:none;
+}
+
+#input
+{
+    color: white ;
+    background-color:#337ab7 ; 
+   border-color:#337ab7 ;
+   border-width:thin;
+   font-family:sans-serif;font-size : 30px; 
+   width: 200px;
+   border-radius: 20px;
+   outline: 0;  
+}
+
+
+table
+{
+    width:150%;
+    border-collapse: collapse;
+}
+
+th
+{
+border: 1px solid #dfe3ee; 
+}
+
+center
+{
+    font-size : 25px; 
+}
+
+td
+{
+    width: 100px; 
+    border: 1px solid #dfe3ee;
+    text-align: center  ;
+    font-size : 20px;  
+}
+
+
+#input2
+{
+    border-color: #dfe3ee ;
+    border-style:solid; 
+    border-radius: 5px; 
+    margin-top: 10px; 
+    padding: 12px 20px;
+    width: 380px;
+}
+
+
+#input3
+{
+    margin-top: 10px;
+    border-color: #dfe3ee ;
+    border-style:solid;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 380px;
+}
