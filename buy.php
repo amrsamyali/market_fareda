@@ -131,39 +131,11 @@ if(isset($_POST['logout']))
              <div style="position:absolute;margin-top: 20px; margin-left:  260px ;"> 
          <a href="http://localhost/market_fareda/buy.php" class="close" data-dismiss="alert" aria-label="close" style="color:red ; font-weight: bold;font-size:20px;" >x</a>
             </div>
-         <form action="" method="post">
-              
-                <div style=" position:absolute; margin-top:70px;margin-left:50px"> <input type="submit" name="rased_month" value="رصيد الشهر" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
-       
-         <form action="" method="post">
-             
-                <div style=" position:absolute; margin-top:140px;margin-left:50px"> <input type="submit" name="rased_year" value="رصيد السنه" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
+        
         
          <form action="" method="post">
              
-                <div style=" position:absolute; margin-top:230px;margin-left:50px"> <input type="submit" name="rased_all" value="الرصيد الكلي" style=" 
+                <div style=" position:absolute; margin-top:50px;margin-left:50px"> <input type="submit" name="rased_all" value="الرصيد الكلي" style=" 
     color: white;                                                                                    
     background-color:#337ab7 ; 
    border-color:#337ab7 ;
@@ -190,39 +162,12 @@ if(isset($_POST['logout']))
              <div style="position:absolute;margin-top: 20px; margin-left:  260px ;"> 
          <a href="http://localhost/market_fareda/buy.php" class="close" data-dismiss="alert" aria-label="close" style="color:red ; font-weight: bold;font-size:20px;" >x</a>
             </div>
-         <form action="" method="post">
-              
-                <div style=" position:absolute; margin-top:70px;margin-left:50px"> <input type="submit" name="mo_month" value="مرتبات الشهر" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
+        
        
-         <form action="" method="post">
-             
-                <div style=" position:absolute; margin-top:140px;margin-left:50px"> <input type="submit" name="mo_year" value="مرتبات السنه" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
         
          <form action="" method="post">
              
-                <div style=" position:absolute; margin-top:230px;margin-left:50px"> <input type="submit" name="mo_all" value="المرتب الكلي" style=" 
+                <div style=" position:absolute; margin-top:50px;margin-left:50px"> <input type="submit" name="mo_all" value="المرتب الكلي" style=" 
     color: white;                                                                                    
     background-color:#337ab7 ; 
    border-color:#337ab7 ;
@@ -250,39 +195,10 @@ if(isset($_POST['logout']))
              <div style="position:absolute;margin-top: 20px; margin-left:  260px ;"> 
          <a href="http://localhost/market_fareda/buy.php" class="close" data-dismiss="alert" aria-label="close" style="color:red ; font-weight: bold;font-size:20px;" >x</a>
             </div>
-         <form action="" method="post">
-              
-                <div style=" position:absolute; margin-top:70px;margin-left:50px"> <input type="submit" name="ka_month" value="كهربا الشهر" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
-       
+         
          <form action="" method="post">
              
-                <div style=" position:absolute; margin-top:140px;margin-left:50px"> <input type="submit" name="ka_year" value="كهربا السنه" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
-        
-         <form action="" method="post">
-             
-                <div style=" position:absolute; margin-top:230px;margin-left:50px"> <input type="submit" name="ka_all" value="الكهربا الكليه" style=" 
+                <div style=" position:absolute; margin-top:50px;margin-left:50px"> <input type="submit" name="ka_all" value="الكهربا الكليه" style=" 
     color: white;                                                                                    
     background-color:#337ab7 ; 
    border-color:#337ab7 ;
@@ -345,21 +261,6 @@ if(isset($_POST['logout']))
          <form action="" method="post">
              
                 <div style=" position:absolute; margin-top:230px;margin-left:50px"> <input type="submit" name="sale_year" value="مبيع السنه" style=" 
-    color: white;                                                                                    
-    background-color:#337ab7 ; 
-   border-color:#337ab7 ;
-   border-width:thin;
-   font-family:sans-serif;font-size : 30px; 
-   width: 200px;
-   border-radius: 20px;
-   outline: 0;  "> 
-                       
-      </div>
-      </form>
-        
-         <form action="" method="post">
-             
-                <div style=" position:absolute; margin-top:320px;margin-left:50px"> <input type="submit" name="sale_all" value="المبيع الكلي" style=" 
     color: white;                                                                                    
     background-color:#337ab7 ; 
    border-color:#337ab7 ;

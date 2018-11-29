@@ -277,13 +277,13 @@ d++;
        if($_POST[$k]!="" &&$_POST[$g]!="")
        {
           $Query ="SELECT * FROM `goods` WHERE 	goods_name ='$_POST[$k]'";
-           $Sql = mysql_query($Query);
-      $Num = mysql_num_rows($Sql);
+           $Sql = mysqli_query($DB->Connect() , $Query);
+      $Num = mysqli_num_rows($Sql);
     
       if($Num == 1) 
       {
           
-          $row= mysql_fetch_assoc($Sql);
+          $row= mysqli_fetch_assoc($Sql);
           
          $als3r=  $_POST[$g]* $row['sale'];
          $almaksb = $_POST[$g]* $row['maksb'];
@@ -291,7 +291,7 @@ d++;
          $alkmia = $row['quantity']-$_POST[$g];
          
           $Query1="UPDATE `goods` SET quantity = $alkmia where goods_name ='$_POST[$k]'  ";
-          $Sql1 = mysql_query($Query1);
+          $Sql1 = mysqli_query($DB->Connect() , $Query1);
      
          echo '
    <tr >
@@ -328,7 +328,7 @@ echo '    <tr>
  $casherr1= $_SESSION['casher_name'];
 $Query2 = "INSERT INTO   `day`  (casherr, data, time, sale_pro , total, maksb) VALUES ('$casherr1','$date','$time', '$text',$total , $alm)";
 
-        $Sql2 = mysql_query($Query2);
+        $Sql2 = mysqli_query($DB->Connect() , $Query2);
         
         
         

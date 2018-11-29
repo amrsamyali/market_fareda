@@ -1,40 +1,36 @@
 <?php
 class Database 
 {
+   private $con;
       public function __construct()
       {
-          $this->Connect();  // To Connect With Database 
+          $this->con = $this->Connect();  // To Connect With Database 
       }
-      
-
       //Connect Database
       public function Connect()
       {
        $localhost="localhost";
        $root="root";
-       $password="amrsamy";
-      @$Connect = mysql_connect($localhost,$root,$password);
-
-     if($Connect)
+       $password="";
+       $db_name = "market_fareda";
+       $conn = mysqli_connect($localhost,$root,$password,$db_name);
+     if($conn)
      {
-      $DB = mysql_select_db("market_fareda");
-      mysql_set_charset("utf8");
-      if(!$DB)
-          throw new Exception("Error To Connect To Select DataBase");
+        mysqli_query($conn,"SET character_set_results=utf8");
+        mb_language('uni'); 
+        mb_internal_encoding('UTF-8');
+        mysqli_query($conn,"set names 'utf8'");
+        return $conn;
      }
      else
      {
          throw new Exception("Error !! To Connect MySql");  
      }
      }
-   
-
-
-
-  //Close Database
+     //Close Database
      public function Close()
      {
-         mysql_close();
+         mysqli_close();
      }
     
 
@@ -42,7 +38,7 @@ class Database
      public function Delete($TableName,$ID,$where='id')
     {
         $Query ="DELETE FROM `$TableName` WHERE `$where`='$ID'"; 
-        $Sql = mysql_query($Query);
+        $Sql = mysqli_query($this->con,$Query);
         if($Sql)  return TRUE;
         else  throw new Exception("Sql Not Deleted");   
     }
@@ -60,7 +56,7 @@ class Database
         $Names = implode($Keys,",");
         $Record = '"'.implode($Values,'","').'"';        
         $Query = "INSERT INTO $TableName ($Names) VALUES ($Record)";
-        $Sql = mysql_query($Query);
+        $Sql = mysqli_query($this->con,$Query);
      
         
     }
@@ -81,8 +77,8 @@ class Database
         $Query .=$Pat;
         $Query = str_replace(",".$Pat," ",$Query);
         $Query .=" WHERE `id`=$ID";
-        $Sql = mysql_query($Query);
-        if(!$Sql) echo  mysql_error();
+        $Sql = mysqli_query($this->con,$Query);
+        if(!$Sql) echo  $Query;
         else  return true;
         }
         else  throw new Exception("Data Is No Array"); 
@@ -94,7 +90,7 @@ class Database
 
     public function get_all_assoc($result){
         $array=array();
-        while($row= mysql_fetch_assoc($result)){
+        while($row= mysqli_fetch_assoc($result)){
             $array[]=$row;
         }
         return $array;  
@@ -123,7 +119,7 @@ class Database
        }
        
        $Query="SElECT $q FROM $table $w";
-       $sql=  mysql_query($Query);
+       $sql=  mysqli_query($this->con,$Query);
        if($sql){
           return $this->get_all_assoc($sql);      
        }
@@ -137,14 +133,14 @@ class Database
    //to select query
     public function Select_Query($Query)
     {
-       $Sql = mysql_query($Query);
+       $Sql = mysqli_query($Query);
         if(!$Sql)  throw new Exception("Error : Sql Cannot Excuted Query .");
-        $Num = mysql_num_rows($Sql);
+        $Num = mysqli_num_rows($this->con,$Sql);
         if($Num >= 0)
         {
              for($i=0;$i<$Num;$i++)
              {
-                 $Data[$i] = mysql_fetch_array($Sql);
+                 $Data[$i] =@mysqli_fetch_array($Sql);
              }
         }
         return @$Data; 
@@ -174,11 +170,11 @@ class Database
     public function Login($UserName,$Password)
     { session_start();
       $Query ="SELECT * FROM `person` WHERE user_name ='$UserName' and password = '$Password'";
-      $Sql = mysql_query($Query);
-      $Num = mysql_num_rows($Sql);
+      $Sql = mysqli_query($this->con,$Query);
+      $Num = mysqli_num_rows($Sql);
     
       if($Num == 1) 
-      {   $row= mysql_fetch_assoc($Sql);
+      {   $row= mysqli_fetch_assoc($Sql);
        
           $_SESSION['casher_name']=$row['user_name'];
           $_SESSION['type_id'] = $row['type_id']; 

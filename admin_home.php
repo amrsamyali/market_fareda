@@ -260,7 +260,7 @@ if(isset($_POST['logout']))
       if($k_m1!="")
       {
         $Query2 = "INSERT INTO   `masaref`  (date, sarf, money) VALUES ('$date','$s',$k_m1)";
-        $Sql2 = mysql_query($Query2);
+        $Sql2 = mysqli_query($DB->Connect() , $Query2);
       } else   echo '<script> alert("من فضلك اكمل البينات")  </script>';
         
              }
